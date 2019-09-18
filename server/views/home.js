@@ -16,10 +16,10 @@ class Home {
     // @access Public
     getHome() {
         router.get('/', (req, res) => {
-            axios.get('http://www.somaku.com/users/1')
-                .then(user => {
-                    const userData = user.data
-                    res.render('index', { userData })
+            axios.get('https://jsonplaceholder.typicode.com/posts')
+                .then(posts => {
+                    const postsData = posts.data
+                    res.render('index', { postsData })
                 })
                 .catch(err => console.log(err))
         })

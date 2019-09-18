@@ -2,9 +2,8 @@
   "name": "joseph_akayesi_get_busy_programme_task_three",
   "version": "1.0.0",
   "description": "Task Three of the NodeJS Get Busy Programme",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "npm run server --prefix server"
   },
   "author": "Joseph Akayesi",
   "license": "ISC"
