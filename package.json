@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Task Three of the NodeJS Get Busy Programme",
   "scripts": {
-    "server": "npm run server --prefix server"
+    "start": "cd server && node server",
+    "server": "cd server && nodemon server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server"
   },
   "author": "Joseph Akayesi",
   "license": "ISC"
