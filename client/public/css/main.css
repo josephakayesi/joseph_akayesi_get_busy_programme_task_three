@@ -7,3 +7,8 @@
     font-family: 'CircularStd-Book';
     src: url('../font/circular-std/CircularStd-Book.otf');
 }
+
+#post:hover {
+    background: #cecece20;
+    cursor: pointer;
+}

@@ -17,6 +17,8 @@ app.use(express.static(path.join(__dirname, '../client/public')))
 
 // Use view
 app.use('/', Views.getViews().Home)
+app.use('/post', Views.getViews().Post)
+app.use('*', Views.getViews().NotFound)
 
 const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Server listening on port ${port}`))

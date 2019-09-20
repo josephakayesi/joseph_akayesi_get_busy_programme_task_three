@@ -3,7 +3,7 @@ class Middleware {
         this.exphbs = require('express-handlebars')
     }
 
-    Handlebars(){
+    Handlebars() {
         return {
             createInstance: this.exphbs.create({
                 defaultLayout: 'main',

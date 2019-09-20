@@ -1,21 +1,27 @@
 <div class='container px-5 pb-5'>
     <div class="card">
         <div class='card-header align-left'>
-            <h4 class='my-auto py-1' style='font-family: CircularStd-Black;'>Posts</h4>
+            <h4 class='my-auto py-1' style='font-family: CircularStd-Black;'>
+                <a class="mr-2" href="#" onclick="goBack()" data-method="post" style="text-decoration:none">
+                    <i data-feather="arrow-left"></i>
+                    <label for="staticEmail" class="col-form-label"></label>
+                </a>
+                Post
+            </h4>
         </div>
         <div class="">
             <div class='details'>
                 <ul class="list-group list-group-flush">
-                    {{#each postsData}}
-                    <li class="list-group-item" id="post" onclick="fetchPost({{id}})" data-method="post">
+                    {{#if postData}}
+                    <li class="list-group-item">
                         <div class="row title">
                             <div class="col">
-                                <h5 style='font-family: CircularStd-Book; font-weight: 600;'>{{title}}</h5>
+                                <h5 style='font-family: CircularStd-Book; font-weight: 600;'>{{postData.title}}</h5>
                             </div>
                         </div>
                         <div class="row body">
                             <div class="col">
-                                <p style='font-family: CircularStd-Book;'>{{body}}
+                                <p style='font-family: CircularStd-Book;'>{{postData.body}}
                                 </p>
                             </div>
                         </div>
@@ -23,21 +29,17 @@
                             <div class="col-8">
                                 <small class="form-text text-info"
                                     style='font-family: CircularStd-Book; font-weight: 500'>userId:
-                                    {{userId}}</small>
+                                    {{postData.userId}}</small>
                             </div>
                             <div class="col-4 text-right">
                                 <span class="badge badge-pill badge-secondary"
-                                    style='font-family: CircularStd-Book'>{{id}}</span>
+                                    style='font-family: CircularStd-Book'>{{postData.id}}</span>
                             </div>
                         </div>
                     </li>
-                    {{/each}}
+                    {{/if}}
                 </ul>
             </div>
-        </div>
-        <div class="text-center py-4">
-            {{> _previous}}
-            {{> _next}}
         </div>
     </div>
 </div>
