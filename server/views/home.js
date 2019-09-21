@@ -70,7 +70,6 @@ class Home {
                     let begin = 0
                     let end = 10
 
-                    console.log(currentPage)
                     if (currentPage > 0) {
                         let next = `/next/${Number(currentPage + 1)}`
                         let previous = `/previous/${Number(currentPage) - 1}`
